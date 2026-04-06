@@ -14,6 +14,12 @@ def thefts_by_weekday(df: pd.DataFrame) -> pd.DataFrame:
     return out
 
 
+def thefts_by_year(df: pd.DataFrame) -> pd.DataFrame:
+    out = df.groupby("stolen_year").size().reset_index(name="count").sort_values("stolen_year")
+    out["growth_pct"] = out["count"].pct_change() * 100
+    return out
+
+
 def summary_by_dimension(df: pd.DataFrame, dimension: str, years_for_growth: tuple[int, int] = (2021, 2022), end_date_mmdd: str = "11-30", min_count_growth: int = 10) -> pd.DataFrame:
     """
     Returns a table with:

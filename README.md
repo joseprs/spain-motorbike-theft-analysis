@@ -31,6 +31,7 @@ Core data processing and analysis logic is implemented in reusable Python module
 From a data-driven perspective, the problem is sufficiently significant and structured to justify further exploration of a product feature aimed at stolen motorbike recovery, especially if focused on high-incidence regions.
 
 ## Project structure
+- `motorbike_thefts_analysis.ipynb`: main notebook for analysis
 - `notebooks/`: exploratory and analytical notebooks
 - `src/`: reusable data processing and analysis code
 - `data/`: raw and processed datasets
