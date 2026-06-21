@@ -113,7 +113,7 @@ def plot_top_rates(df: pd.DataFrame, dimension: str, rate_col: str, top_n: int =
     ax.bar(data[dimension], data[rate_col])
     ax.set_title(f"Top {top_n} provinces by theft rate")
     ax.set_ylabel("Thefts per 100,000 inhabitants")
-    ax.set_xticklabels(data[dimension], rotation=90)
+    ax.tick_params(axis="x", labelrotation=90)
 
     plt.tight_layout()
     plt.show()
